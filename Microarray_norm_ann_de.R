@@ -28,7 +28,7 @@ data1 <- read.delim("impl.txt", check.names = FALSE)
 data2 <- read.delim("data1.txt", check.names = FALSE)
 combined <- left_join(data1, data2, by = "ID")
 write.csv(combined, "annotated.csv")
-
+#differential expression
 library(limma)
 pData(eset)
 Groups <- c("Tumor", "Tumor", "Tumor", "Tumor", "Tumor", "Normal", "Normal", "Normal", "Normal", "Normal")
